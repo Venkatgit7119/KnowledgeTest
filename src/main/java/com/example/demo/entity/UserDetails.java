@@ -30,6 +30,9 @@ public class UserDetails implements Serializable
 
 	@Column(name="age")
 	private Integer age;
+	
+	@Column(name="comments")
+	private String comments;
 
 	/**
 	 * @return the id
@@ -85,6 +88,20 @@ public class UserDetails implements Serializable
 	 */
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	/**
+	 * @return the comments
+	 */
+	public String getComments() {
+		return comments;
+	}
+
+	/**
+	 * @param comments the comments to set
+	 */
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
 
 

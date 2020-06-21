@@ -20,13 +20,18 @@ public class UsersServiceImpl implements UsersService {
 	UserRepository userRepo;
 	
 	@Override
-	public String getUsers()
+	public String getUsers(String name)
 	{
-		List<UserDetails> usersize= userRepo.getusers("Venkat");
+		String comments = "Service up and Running in server. Dont worry"; 
+		List<UserDetails> usersize= userRepo.getusers(name);
 		
+		if(usersize.size() > 0)
+		{
+			comments= usersize.get(0).getComments();
+		}
+
 		
-		
-		return "in Users service impl Hello" +usersize.get(0).getName() ;
+		return comments;
 	}
 
 }

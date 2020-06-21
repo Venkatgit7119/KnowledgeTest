@@ -13,14 +13,10 @@ public class UsersResourceImpl implements UsersResource {
 	@Autowired
 	UsersService userService;
 	
+
 	@Override
-	public String getUsers ()
-	{
-		
-		
-		
-		return  userService.getUsers();
-		
+	public String getUsersById(String name) {
+		return  userService.getUsers(name);
 	}
 
 }
