@@ -34,4 +34,21 @@ public class UsersServiceImpl implements UsersService {
 		return comments;
 	}
 
+	@Override
+	public List<UserDetails> getAllUsers() {
+		
+		
+		String comments = "Service up and Running in server. Dont worry"; 
+		List<UserDetails> usersize= userRepo.getusers("Venkat");
+		
+		
+		if(usersize.size() > 0)
+		{
+			comments= usersize.get(0).getComments();
+		}
+		System.out.println("comments  "+comments);
+		
+		return usersize;
+	}
+
 }
