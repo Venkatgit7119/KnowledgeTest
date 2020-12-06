@@ -30,6 +30,14 @@ public class Questions implements Serializable
 
 	@Column(name="questionstamil")
 	private String questionstamil;
+	
+	@Column(name="correctAnswers")
+	private String correctAnswers;
+
+	
+	@Column(name="correctAnswersTamil")
+	private String correctAnswersTamil;
+
 
 	/**
 	 * @return the id
@@ -85,6 +93,34 @@ public class Questions implements Serializable
 	 */
 	public void setQuestionstamil(String questionstamil) {
 		this.questionstamil = questionstamil;
+	}
+
+	/**
+	 * @return the correctAnswers
+	 */
+	public String getCorrectAnswers() {
+		return correctAnswers;
+	}
+
+	/**
+	 * @param correctAnswers the correctAnswers to set
+	 */
+	public void setCorrectAnswers(String correctAnswers) {
+		this.correctAnswers = correctAnswers;
+	}
+
+	/**
+	 * @return the correctAnswersTamil
+	 */
+	public String getCorrectAnswersTamil() {
+		return correctAnswersTamil;
+	}
+
+	/**
+	 * @param correctAnswersTamil the correctAnswersTamil to set
+	 */
+	public void setCorrectAnswersTamil(String correctAnswersTamil) {
+		this.correctAnswersTamil = correctAnswersTamil;
 	}
 	
 

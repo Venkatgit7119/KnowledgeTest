@@ -20,6 +20,6 @@ import com.example.demo.entity.UserDetails;
 public interface UserRepository extends JpaRepository<UserDetails,String> {
 	
 	@Query("select u from UserDetails u where u.name=:name")
-	List<UserDetails> getusers(@Param("name") String name);
+	UserDetails getuser(@Param("name") String name);
 
 }

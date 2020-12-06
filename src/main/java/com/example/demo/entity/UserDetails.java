@@ -33,6 +33,10 @@ public class UserDetails implements Serializable
 	
 	@Column(name="comments")
 	private String comments;
+	
+	
+	@Column(name="isActive")
+	private Boolean isActive;
 
 	/**
 	 * @return the id
@@ -102,6 +106,20 @@ public class UserDetails implements Serializable
 	 */
 	public void setComments(String comments) {
 		this.comments = comments;
+	}
+
+	/**
+	 * @return the isActive
+	 */
+	public Boolean getIsActive() {
+		return isActive;
+	}
+
+	/**
+	 * @param isActive the isActive to set
+	 */
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
 	}
 
 

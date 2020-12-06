@@ -1,6 +1,7 @@
 package com.example.demo.service.impl;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,15 +22,18 @@ public class UsersServiceImpl implements UsersService {
 	public String getUsers(String name)
 	{
 		String comments = "Service up and Running in server. Dont worry"; 
-		List<UserDetails> usersize= userRepo.getusers(name);
+		UserDetails user= userRepo.getuser(name);
 		
-		if(usersize.size() > 0)
+		if(user!=null && user.getIsActive()!=null && user.getIsActive())
 		{
-			comments= usersize.get(0).getComments();
+			
+				return "1";
+			
+			
 		}
 
 		
-		return comments;
+		return  "0";
 	}
 
 	@Override
@@ -37,14 +41,7 @@ public class UsersServiceImpl implements UsersService {
 		
 		
 		String comments = "Service up and Running in server. Dont worry"; 
-		List<UserDetails> usersize= userRepo.getusers("Venkat");
-		
-		
-		if(usersize.size() > 0)
-		{
-			comments= usersize.get(0).getComments();
-		}
-		System.out.println("comments  "+comments);
+		List<UserDetails> usersize= new ArrayList<>();
 		
 		return usersize;
 	}
